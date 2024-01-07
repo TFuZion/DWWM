@@ -5,12 +5,13 @@ console.log("2 : Saisie jusqu'à note négative");
 
 let choix = +prompt()
 let tableau = []
+let tableau2 = []
 
 function choix1(choix) {
   console.log(`Votre choix : ${choix}`);
-  
+  console.log(`Combien de notes ?`);
   let nmbNotesChoix1 = +prompt()
-  console.log(`Combien de notes ? ${nmbNotesChoix1}`);
+  console.log (`${nmbNotesChoix1}`);
   console.log("Début de Saisie !");
   
   for (let i = 0; i < nmbNotesChoix1; i++) {
@@ -31,6 +32,20 @@ function choix1(choix) {
 
 function choix2(choix) {
   console.log(`Votre choix : ${choix}`);
+  let notesChoix2 =+prompt()
+  // while (notesChoix2 > 0){
+  //   tableau2.push(Number(notesChoix2))
+  //   console.log(`Veuillez entrer une note entre 0 et 20 compris : ${notesChoix2}`);
+  // }
+  
+  console.log("Fin de saisie !");
+  let max = (Math.max(...tableau));
+  let min = (Math.min(...tableau));
+  let somme = tableau.reduce((total, element) => total + element, 0);
+  let moy = somme / tableau.length;
+  console.log(`La note maximal est de ${max}/20`);
+  console.log(`La note mininmal est de ${min}/20`);
+  console.log(`La moyenne est de ${moy}/20`);
 }
 
 
