@@ -1,9 +1,7 @@
 let tableau = []
 
 for (let i = 0; i < 10; i++) {
-  min = Math.ceil(0);
-  max = Math.floor(100);
-  let valeur = Math.floor(Math.random() * (max-min +1)) + min;
+  let valeur = Math.floor(Math.random() * (25-1)) + 1;
   tableau.push(Number(valeur));
   let space = "\t".repeat(i)
   console.log(space, valeur);
