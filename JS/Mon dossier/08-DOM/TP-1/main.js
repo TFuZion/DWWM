@@ -2,14 +2,11 @@ const bravo = document.getElementById("bravo"),
   essai = document.getElementById("essai"),
   nbCoups = document.getElementById("nbCoups"),
   userNombre = document.getElementById("userNombre")
-  
-  
-  
-document.getElementById("rejouer")
-.addEventListener("click", location.reload.bind(location))
-  
-document.getElementById("onclick").addEventListener("click", conteurCoups)
+
+
+  document.getElementById("onclick").addEventListener("click", conteurCoups)
 let Coups = 0
+
 function conteurCoups() {
   Coups++;
   nbCoups.innerHTML = `Nombre de coups : ${Coups}`
@@ -45,12 +42,12 @@ function valider() {
   if (nombre == nbMystere) {
     bravo.innerHTML = `Bravo vous avez gagné !`
     essai.innerHTML = `Le nombre mystère était ${nbMystere}`
-    resetInput()
     document.getElementById("onclick").removeEventListener("click", conteurCoups)
-    document.getElementById("onclick").disabled = true
+    resetInput()
   }
 }
 
+document.getElementById("rejouer").location.reload()
 
 
 
