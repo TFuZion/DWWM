@@ -1,13 +1,27 @@
-let liste = document.querySelector(".liste")
+const prenom = document.querySelector("#prenom"),
+    listePrenom = document.querySelector("#listePrenom")
 
-function myButtonClick() {
-  alert(liste)
+// const prenom = document.getElementById("prenom")
+let tableauPrenom = []
+
+function valider() {
+  tableauPrenom.push(prenom.value)
+  displayTab()
+  prenom.value = ""
 }
 
-document.addEventListener("keydown", (event) => {
-  console.log(event.key);
-  if(event.key == "Enter") {
-      let message = inputText.value
-      alert("Vous avez appuyé sur Enter \nMessage : " + message)
+function supprimer() {
+  let prenomFound = tableauPrenom.find((p)=> p == prenom.value)
+
+  if (prenomFound) {
+    tableauPrenom = tableauPrenom.filter((prenom)=> prenom != prenomFound)
+    displayTab()
   }
-})
+}
+
+function displayTab() {
+  listePrenom.innerHTML = ""
+  tableauPrenom.forEach((prenom)=> {
+    listePrenom.innerHTML += `<li>${prenom}</li>`
+  })
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+<body>
+  <section>
+    <div>
+      <input  type="text" id="inputSalaire" placeholder="Dernier Salaire">
+      <input  type="text" id="inputAge" placeholder="Age">
+      <input  type="text" id="inputAnnee" placeholder="Ancienneté">
+    </div>
+    <button onclick="valider()">Valider
+    </button>
+  </section>
+  <div id="bot">
+    <p>Le montant de l'indemnité pour un salaire de</p>
+    <p class="bold" id="seeSalaire"></p>
+    <p>pour un salarié de</p>
+    <p class="bold" id="seeAge"></p>
+    <p>avec une ancienneté de</p>
+    <p class="bold" id="seeAnnee"></p>
+    <p>sélève à</p>
+    <p class="bold" id="seeResultat"></p>
+  </div>
+</body>
+<script defer src="./main.js"></script>
+</html>

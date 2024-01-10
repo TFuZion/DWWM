@@ -7,16 +7,12 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="liste">
-    <ul>
-      <li>Thomas</li>
-      <li>Juliette</li>
-      <li>Tristan</li>
-      <li>Ben</li>
-    </ul>
-  </div>
-  <button class="btn btn-primary" onclick="myButtonClick()">Voir la liste</button>
-  <button class="btn btn-success" onclick="myButtonClick()">Ajouter un prénom à la liste</button>
+<div>
+  <input type="text" id="prenom" placeholder="Saisir un prénom">
+  <button onclick="valider()">Valider</button>
+  <button onclick="supprimer()">Supprimer</button>
+</div>
+<ul id="listePrenom"></ul>
 </body>
 <script defer src="./main.js"></script>
 </html>
