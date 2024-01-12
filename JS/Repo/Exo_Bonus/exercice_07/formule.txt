@@ -1,0 +1,2 @@
+sommeCarre : Math.pow(cote1, 2) + Math.pow(cote2, 2)
+hypotenuse : Math.sqrt(sommeCarre)

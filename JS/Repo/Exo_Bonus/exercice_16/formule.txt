@@ -1,0 +1,6 @@
+ancienneté entre 1 et 10
+indemnite = anciennete * salaire / 2
+
+ancienneté supérieur 10
+indemnite = 10 * salaire / 2
+indemnite = (anciennete - 10) * salaire

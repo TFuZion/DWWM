@@ -1,0 +1,7 @@
+revenuImposable = revenus / nbParts
+
+revenu entre 10 778 et 27 478
+montantImpot = (revenuImposable - 10777) * 0.11
+
+revenu entre 27 479 € à 78 570
+montantImpot = (revenuImposable - 27478) * 0.30 + (27478 - 10777) * 0.11
