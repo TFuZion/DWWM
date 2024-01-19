@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eRPG</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script type="module" src="./assets/js/main.js"></script>
+</head>
+<body>
+    <main>
+        <h1>eRPG</h1>
+        <hr>
+        <form action="#" id="char-add">
+            <div>
+                <label for="char-name">Name: </label>
+                <input type="text" id="char-name">
+            </div>
+            <div>
+                <label for="char-player-name">Player name: </label>
+                <input type="text" id="char-player-name">
+            </div>
+            <div>
+                <label for="char-height">Height (in cm): </label>
+                <input type="number" min="1" max="300" value="1" id="char-height">
+            </div>
+            <div>
+                <label for="char-weight">Weight (in kg): </label>
+                <input type="number" min="1" max="300" value="1" id="char-weight">
+            </div>
+            <div>
+                <select name="char-class" id="char-class">
+                    <option value="">Select a class...</option>
+                </select>
+            </div>
+            <div>
+                <h3>Stats</h3>
+                <div>
+                    <span id="char-stats-points">10</span> available points
+                </div>
+                <div>
+                    <label for="char-stats-strength">Strength: </label>
+                    <input type="number" min="1" max="100" value="20" id="char-stats-strength">
+                </div>
+                <div>
+                    <label for="char-stats-intelligence">Intelligence: </label>
+                    <input type="number" min="1" max="100" value="20" id="char-stats-intelligence">
+                </div>
+                <div>
+                    <label for="char-stats-stamina">Stamina: </label>
+                    <input type="number" min="1" max="100" value="20" id="char-stats-stamina">
+                </div>
+                <div>
+                    <label for="char-stats-health">Health: </label>
+                    <input type="number" min="1" max="100" value="20" id="char-stats-health">
+                </div>
+            </div>
+            <button>Submit</button>
+        </form>
+    </main>
+</body>
+</html>

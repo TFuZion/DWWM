@@ -12,16 +12,16 @@
 */
 
 const BASE_POKEMON_API_URL = "https://pokeapi.co/api/v2/"
-let pokemonSummaries = []
-let pokedexRegion = []
+let generationSummaries = []
+let pokemonGen = []
 
 const fetchAllPokemonSummaries = async () => {
   try {
-    const response = await fetch(BASE_POKEMON_API_URL + "region")
+    const response = await fetch(BASE_POKEMON_API_URL + "generation")
     if (response.status === 200) {
       const data = await response.json()
-      pokemonSummaries = data.results
-      console.log(pokemonSummaries);
+      generationSummaries = data.results
+      console.log(generationSummaries);
     } else {
       throw new Error('Le serveur ne peut pas traiter la requête')
     }
@@ -36,8 +36,8 @@ const fetchUrlRegion = async (url) => {
     const response = await fetch(url)
     if (response.status === 200) {
       const data = await response.json()
-      pokedexRegion = data.pokedexes
-      console.log(pokedexRegion);
+      pokemonGen = data.pokemon_species
+      console.log(pokemonGen);
     } else {
       throw new Error('Le serveur ne peut pas traiter la requête')
     } 
@@ -58,12 +58,25 @@ document.addEventListener('DOMContentLoaded', async () => {
   
   try {
     await fetchAllPokemonSummaries()
-    pokemonSummaries.forEach(infos => {
+    generationSummaries.forEach((infos) => {
       const newOption = document.createElement('option')
       newOption.textContent = infos.name
       selectGeneration.appendChild(newOption)
+
+
       selectGeneration.addEventListener('change', async () => {
-        const url = await fetchUrlRegion(infos.url)
+        const { value } = selectGeneration
+        if (!value) return
+        else {
+          const url = await fetchUrlRegion(infos.url)
+  
+          
+          pokemonGen.forEach(infos => {
+            const newOptionPoke = document.createElement('option')
+            newOptionPoke.textContent = infos.name
+            selectPokemonName.appendChild(newOptionPoke)
+          })
+        }
       })
     })
   } catch (err) {
