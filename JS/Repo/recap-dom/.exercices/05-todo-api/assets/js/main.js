@@ -34,3 +34,34 @@
     
     BONUS - Faire en sorte d'avoir le décompte du temps qui passe et la mise à jour de l'affichage de l'urgence de la todo en temps réel. De plus, les todos devront être triées non par n'importe comment mais par urgence, avec celles non réalisées dans les temps qui clignotent et une alartme qui sonne
 */
+
+const BASE_TODO_API_URL =
+  "https://m2i-formation-80f80-default-rtdb.europe-west1.firebasedatabase.app/";
+
+let tabToDo = [];
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const taskContent = document.getElementById("task-content");
+  const inputDate = document.getElementById("inputDate");
+  const addTask = document.getElementById("addTask");
+  const taskDisplay = document.getElementById("taskDisplay");
+
+  const response = await fetch(BASE_TODO_API_URL + "todos.json");
+  if (response.status !== 200) console.error("Problème...");
+  const data = await response.json();
+  if (!data) console.error("Problème...");
+
+  addTask.addEventListener("click", async () => {
+    const response = await fetch(BASE_TODO_API_URL + "todos.json", {
+      method: "POST",
+      body: JSON.stringify({
+        text: taskContent.value,
+        duedate: inputDate.value,
+        finished: false,
+      }),
+    });
+    
+  });
+
+
+});
