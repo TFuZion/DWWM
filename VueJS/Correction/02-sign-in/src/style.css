@@ -1,0 +1,13 @@
+body, html {
+    margin: 0;
+}
+
+#app {
+    background-color: hsl(0, 0%, 10%);
+    height: 100dvh;
+    width: 100dvw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

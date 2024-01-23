@@ -2,26 +2,15 @@
 import { ref, computed } from "vue";
 let count = ref(1);
 
-const incrementCount = () => {
-  count.value++;
-};
-const decrementCount = () => {
-  count.value--;
-};
-const buttonDisabledComputed = computed(() => {
-  return count.value <= 0;
-});
+const incrementCount = () => count.value++;
+const decrementCount = () => count.value--;
+const buttonDisabledComputed = computed(() => count.value <= 0);
 const multiple = computed(() => {
-  if (count.value % 3 === 0 && count.value % 5 === 0) {
-    const fizzbuzz = "FizzBuzz";
-    return fizzbuzz;
-  } else if (count.value % 5 === 0) {
-    const buzz = "Buzz";
-    return buzz;
-  } else if (count.value % 3 === 0) {
-    const fizz = "Fizz";
-    return fizz;
-  } else return count;
+  if (count.value === 0) return count;
+  else if (count.value % 3 === 0 && count.value % 5 === 0) return "fizzbuzz";
+  else if (count.value % 5 === 0) return "buzz";
+  else if (count.value % 3 === 0) return "fizz";
+  else return count;
 });
 </script>
 
