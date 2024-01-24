@@ -23,7 +23,12 @@ const addContact = () => {
     <label for="lastname">Name : </label>
     <input v-model="contact.lastname" type="text" id="lastname" />
     <label for="email">Email : </label>
-    <input v-model="contact.email" type="email" id="email" />
+    <input
+      v-model="contact.email"
+      type="email"
+      id="email"
+      pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+    />
     <label for="phoneNumber">N° de téléphone : </label>
     <input
       v-model="contact.phoneNumber"
@@ -46,14 +51,46 @@ const addContact = () => {
         <td>{{ c.lastname }}</td>
         <td>{{ c.email }}</td>
         <td>{{ c.phoneNumber }}</td>
-        <td>
-          <button @click="mesContacts.splice(i, 1)">supprimer</button>
-        </td>
       </tr>
     </tbody>
   </table>
 </template>
 
 <style scoped>
-
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 40%;
+  width: 100%;
+  > input {
+    margin: 5px 0 10px 0;
+    height: 10%;
+    width: 45%;
+    border-radius: 10px;
+    border: solid rgb(81, 81, 236);
+    background-color: hsl(0, 0%, 90%);
+    padding: 5px;
+  }
+  > button {
+    width: 20%;
+    height: 5%;
+  }
+}
+label {
+  color: hsl(0, 0%, 89%);
+}
+table {
+  height: 60%;
+  width: 100%;
+  color: hsl(0, 0%, 89%);
+}
+td {
+  text-align: center;
+  > button {
+    width: 100%;
+    height: 50%;
+  }
+}
 </style>

@@ -7,17 +7,11 @@ body {
   background: linear-gradient(rgb(82, 117, 231), rgb(23, 23, 216));
   height: 100dvh;
   width: 100dvw;
+}
+#app {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#app {
-  background-color: hsl(0, 0%, 15%);
-  height: 80%;
-  width: 80%;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  border-radius: 35px;
-  flex-direction: column;
 }
