@@ -40,7 +40,7 @@ div {
   width: 30%;
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: start;
 }
 th {
   font-size: 2rem;

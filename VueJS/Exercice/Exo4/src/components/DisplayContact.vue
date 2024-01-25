@@ -16,10 +16,10 @@ const styleFirstname = {
 
 <template>
   <tr>
-    <td :class="styleFirstname">{{ tdCharacter.firstname ? tdCharacter.firstname : "Error"}}</td>
-    <td>{{ tdCharacter.lastname ? tdCharacter.lastname : "Error" }}</td>
-    <td>{{ tdCharacter.email ? tdCharacter.email : "Error" }}</td>
-    <td>{{ tdCharacter.phoneNumber ? tdCharacter.phoneNumber : "Error" }}</td>
+    <td :class="styleFirstname">{{ tdCharacter.firstname}}</td>
+    <td>{{ tdCharacter.lastname}}</td>
+    <td>{{ tdCharacter.email}}</td>
+    <td>{{ tdCharacter.phoneNumber}}</td>
   </tr>
 </template>
 
@@ -34,6 +34,7 @@ const styleFirstname = {
 td {
   text-align: center;
   font-size: 1.2rem;
+  margin: 5px;
 }
 tr {
   margin: 10px;

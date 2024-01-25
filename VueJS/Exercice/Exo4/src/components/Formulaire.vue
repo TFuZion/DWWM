@@ -35,6 +35,7 @@ const submitContact = () => {
         v-model="contact.email"
         type="email"
         id="email"
+        pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
       />
     </div>
     <div>
@@ -73,7 +74,7 @@ div {
   height: 100%;
 }
 input {
-    margin: 5px 0 10px 0;
+    margin: 5px 0 70px 0;
     height: 35%;
     width: 75%;
     border-radius: 10px;
@@ -83,20 +84,8 @@ input {
   }
 label {
   color: hsl(0, 0%, 89%);
+  margin: 25px 0 0px 0;
 }
-/* 
-table {
-  height: 60%;
-  width: 100%;
-  color: hsl(0, 0%, 89%);
-}
-td {
-  text-align: center;
-  > button {
-    width: 100%;
-    height: 50%;
-  }
-} 
-      pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-*/
+
+
 </style>
