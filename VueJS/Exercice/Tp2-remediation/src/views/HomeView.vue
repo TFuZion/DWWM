@@ -5,11 +5,13 @@ import InventoryList from "@/components/InventoryList.vue";
 const props = defineProps({ getUserName: String });
 
 const emit = defineEmits(["update:userStartApp"]);
-const userStartApp = ref(false);
+
 const toggleUserStartApp = () => {
   userStartApp.value = !userStartApp.value;
   emit("update:userStartApp", userStartApp.value);
 };
+
+const userStartApp = ref(false);
 </script>
 
 <template>

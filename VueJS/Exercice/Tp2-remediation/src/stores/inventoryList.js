@@ -7,8 +7,8 @@ export const useInventoryListStore = defineStore("inventoryList", {
   }),
 
   actions: {
-    addItem(item, desc) {
-      this.inventoryList.push({ item, desc, id: this.id++ });
+    addItem(item) {
+      this.inventoryList.push({ ...item, id: this.id++ });
     },
     deleteItem(itemId) {
       this.inventoryList = this.inventoryList.filter((x) => {

@@ -2,31 +2,34 @@
 import { ref } from "vue";
 import { useInventoryListStore } from "@/stores/inventoryList";
 
-const thing = ref("");
-const description = ref("");
+const item = ref({
+  name: '',
+  description: ''
+});
+
 
 const store = useInventoryListStore();
 
-function addInBackPack(item, desc) {
-  if (item.length === 0) {
-    return;
+const addInBackPack = () => {
+  store.addItem(item.value);
+  item.value = {
+    name: '',
+    description: ''
   }
-  store.addItem(item, desc);
-  thing.value = "";
-  description.value = "";
 }
+
 </script>
 
 <template>
-  <form @submit.prevent="addInBackPack(thing, description)"></form>
+  <form @submit.prevent="addInBackPack(item)"></form>
   <div>
     <label for="nameThing">Nom de l'objet : </label>
-    <input v-model="thing" type="text" id="nameThing" />
+    <input v-model="item.name" type="text" id="nameThing" />
   </div>
   <div>
     <label for="description">Description : </label>
     <textarea
-      v-model="description"
+      v-model="item.description"
       id="description"
       cols="30"
       rows="10"

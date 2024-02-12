@@ -24,7 +24,7 @@ const { deleteItem } = store;
 </script>
 
 <template>
-  <div v-for="thing in inventoryList" :key="thing.id">
+  <div v-for="item in inventoryList" :key="item.id">
     <h3>{{ thing.item }}</h3>
     <span id="date">Ajouté le : {{ formattedDateTime }}</span>
     <span @click="deleteItem(thing.id)"> &#10060; </span>
