@@ -1,0 +1,16 @@
+{
+    // saisir tsc à la racine du projet pour compiler les sources
+
+    // https://www.typescriptlang.org/tsconfig
+    // options du compilateur
+    "compilerOptions": {
+        "target": "ES6",
+        "outDir": "./dist/"
+    },
+    // emplacement des fichiers .ts
+    "include": [
+        "./src/*"
+    ],
+    // Fichiers à ne pas compiler
+    "exclude": []
+}
