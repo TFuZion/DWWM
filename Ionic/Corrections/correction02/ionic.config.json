@@ -1,0 +1,7 @@
+{
+  "name": "correction02",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}

@@ -12,7 +12,6 @@ const noteInput = ref(0);
 function addNote(note: number) {
   if (note < 0 || note > 20) {
     toast("Erreur: saisir un nombre entre 0 et 20", {
-      autoClose: 1000,
       "theme": "light",
       "type": "error",
       "dangerouslyHTMLString": true

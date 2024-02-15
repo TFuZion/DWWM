@@ -1,0 +1,7 @@
+{
+  "name": "exo01",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
