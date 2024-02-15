@@ -1,0 +1,7 @@
+{
+  "name": "mto-4000",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
