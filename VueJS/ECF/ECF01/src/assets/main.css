@@ -1,0 +1,30 @@
+@import './base.css';
+
+:root {
+--text: #ebe9fc;
+--primary: #aeaacd;
+--secondary: #373169;
+--accent: #584bd0;
+}
+
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 175px 1fr;
+  justify-items: center;
+  height: 100dvh;
+  width: 100dvw;
+}
+a::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 0%;
+  height: 3px;
+  background-color: #ebe9fc;;
+  transition: width 0.2s ease-in-out 0.2s;
+}
+a:hover::after{
+  width: 100%;
+}
