@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "tittle": "Harry Potter",
+    "auteur": "J. K. Rowling"
+  },
+  {
+    "id": 2,
+    "tittle": "Lord of the Ring",
+    "author": "J. R. R. Tolkien"
+  },
+  {
+    "id": 3,
+    "tittle": "Game of Thrones",
+    "author": "George R. R. Martins"
+  }
+]
