@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/02_php_sql/Correction/exercice02/script.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/02_php_sql/Correction/exercice03/script.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/02_php_sql/Exercice/exo01etudiant.php" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/02_php_sql/Exercice/exo02commande.php" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/02_php_sql/Exercice/scriptCommande.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/02_php_sql/Exercice/scriptM2ilearning.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/02_php_sql/Leçons/scriptdemo03.sql" dialect="MariaDB" />
+  </component>
+</project>
