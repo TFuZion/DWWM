@@ -1,0 +1,19 @@
+- `app/` : ce répertoire contient le code de l'application, y compris les contrôleurs, les modèles, les vues, etc.
+- `app/Console/` : ce répertoire contient les commandes Artisan personnalisées pour l'application.
+- `app/Exceptions/` : ce répertoire contient les classes d'exception personnalisées pour l'application.
+- `app/Http/` : ce répertoire contient les fichiers liés à la couche HTTP de l'application, y compris les contrôleurs, les middlewares, les demandes de formulaire, etc.
+- `app/Providers/` : ce répertoire contient les fournisseurs de services pour l'application.
+- `bootstrap/` : ce répertoire contient les fichiers d'amorçage de l'application, y compris la configuration de l'environnement et l'enregistrement des fournisseurs de services.
+- `config/` : ce répertoire contient les fichiers de configuration de l'application.
+- `database/` : ce répertoire contient les fichiers liés à la base de données de l'application, y compris les migrations et les graines.
+- `public/` : ce répertoire contient les fichiers publics de l'application, y compris les feuilles de style, les scripts et les images.
+- `resources/` : ce répertoire contient les ressources de l'application, y compris les vues, les fichiers de langue, les fichiers de validation, etc.
+- `routes/` : ce répertoire contient les fichiers de routage de l'application.
+- `storage/` : ce répertoire contient les fichiers de stockage de l'application, y compris les journaux, les fichiers de session et les fichiers de cache.
+- `tests/` : ce répertoire contient les tests de l'application.
+- `vendor/` : ce répertoire contient les dépendances de l'application gérées par Composer.
+- `.env` : ce fichier contient les variables d'environnement pour l'application.
+- `.gitignore` : ce fichier contient les règles d'exclusion de fichiers pour Git.
+- `composer.json` : ce fichier contient les dépendances de l'application gérées par Composer.
+- `package.json` : ce fichier contient les dépendances frontales de l'application gérées par NPM.
+- `phpunit.xml` : ce fichier contient la configuration de PHPUnit pour l'application.
