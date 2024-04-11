@@ -24,3 +24,33 @@ Créez les vues suivantes dans le répertoire `resources/views` :
 
 - `contact.create` : cette vue doit afficher le formulaire de contact avec les champs suivants : nom, adresse e-mail, objet et message. Le formulaire doit envoyer une requête `POST` à l'URI `/contact`.
 - `contact.thanks` : cette vue doit afficher un message de confirmation indiquant que le formulaire a été envoyé avec succès.
+
+### Étape 4 : Création des migrations et des modèles
+
+Dans cette étape, vous allez créer une migration pour la table de la base de données qui stockera les messages de contact et un modèle pour interagir avec cette table.
+
+#### Création de la migration
+
+Pour créer une migration, utilisez la commande suivante dans votre terminal :
+
+```lua
+php artisan make:migration create_contact_messages_table --create=contact_messages
+
+```
+
+Cette commande va créer un fichier de migration dans le répertoire `database/migrations`. Ouvrez ce fichier et ajoutez les colonnes nécessaires pour stocker les informations de contact dans la méthode `up()`. Assurez-vous d'inclure des colonnes pour le nom, l'adresse e-mail, l'objet et le message.
+
+#### Création du modèle
+
+Ensuite, créez un modèle `ContactMessage` pour interagir avec la table `contact_messages`. Utilisez la commande suivante dans votre terminal :
+
+```go
+php artisan make:model ContactMessage
+
+```
+
+Cette commande va créer un fichier `ContactMessage.php` dans le répertoire `app/Models`. Ouvrez ce fichier et définissez les propriétés et les relations nécessaires pour interagir avec la table `contact_messages`.
+
+#### Mise à jour du contrôleur
+
+Enfin, mettez à jour la méthode `store()` du contrôleur `ContactController` pour enregistrer les données du formulaire dans la base de données en utilisant le modèle `ContactMessage`. Assurez-vous de valider les données avant de les enregistrer.
